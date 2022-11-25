@@ -1,0 +1,10 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { name, description, category } = Astro.props.frontmatter
+---
+
+<BaseLayout name={name} category={category.toLowerCase()}>
+  <h1 class="text-3xl font-bold mb-2">{name}</h1>
+  <p>{description}</p>
+  <slot/>
+</BaseLayout>

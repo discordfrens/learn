@@ -1,0 +1,43 @@
+---
+name: "Contribute"
+category: "misc"
+layout: "../layouts/MDXLayout.astro"
+---
+
+Learn is mangaged and maintained by [frens](https://github.com/discordfrens) and its community. Having learn open sourced allows **you** to be able to contribute to this free resource book. Examples on how learn is layed out can be found below or you can see them in the [github repo.](https://github.com/discordfrens/resources)
+
+Learn's file structure follows a simple format.
+
+<div class="flex row gap-2 w-full">
+![File structure](https://cdn.discordapp.com/attachments/1039957808247996448/1045754382391726110/image.png)
+<div class="flex flex-col">
+  `learn/[category]/index.astro`
+  <div>
+    `learn/[category]/[item].mdx`
+  </div>
+</div>
+</div>
+
+Your following index.astro should contain this content and nothing else.
+```astro
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import RenderAllContent from "../../../components/RenderAllContent.astro";
+const category = "CATEGORY"
+---
+
+<BaseLayout category={category}>
+  <RenderAllContent category={category}/>
+</BaseLayout>
+```
+
+Any markdown(mdx) files should contain the following boiler plate.
+```mdx
+---
+name: "Name"
+category: "THE CATEGORY IT IS IN"
+layout: "../../../layouts/MDXLayout.astro"
+---
+
+The content....
+```

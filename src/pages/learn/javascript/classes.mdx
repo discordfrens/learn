@@ -1,0 +1,23 @@
+---
+name: "Classes"
+category: "Javascript"
+layout: "../../../layouts/MDXLayout.astro"
+---
+
+```js
+class Person {
+  public name
+  construtor(name) {
+    this.name = name
+  }
+
+  get name() {
+    return this.name
+  }
+}
+```
+
+```js
+const person = new Person("Frens")
+console.log(person.name())
+```

@@ -1,0 +1,17 @@
+---
+const { category } = Astro.props;
+
+const posts = await Astro.glob("../pages/**/*.mdx")
+const stuffs = posts.filter(f => f.frontmatter.category.toLowerCase() === category.toLowerCase())
+---
+
+<div class="flex flex-col w-96">
+  {stuffs.map((stuff) => {
+    return  <a
+          href={`/learn/${stuff.frontmatter.category.toLowerCase()}/${stuff.frontmatter.name.toLowerCase()}`}
+          class="text-white hover:text-white w-full mb-1 transition ease-in cursor-pointer border-opacity-50 bg-opacity-50 duration-100 border border-neutral-700 bg-neutral-800 px-2 py-1 rounded hover:border-opacity-70 hover:bg-opacity-50 hover:border-neutral-500 hover:bg-neutral-700"
+        >
+          <p class="opacity-100 no-margin">{stuff.frontmatter.name}</p>
+        </a>
+  })}
+</div>
