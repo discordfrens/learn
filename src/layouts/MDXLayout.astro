@@ -7,4 +7,5 @@ const { name, description, category } = Astro.props.frontmatter
   <h1 class="text-3xl font-bold mb-2 title">{name}</h1>
   <p>{description}</p>
   <slot/>
+  <a href={`https://github.com/discordfrens/learn/tree/master/src/pages/learn/${category.toLowerCase().split(" ").join("-")}/${name.toLowerCase().split(" ").join("-")}.mdx`}>Edit on github!</a>
 </BaseLayout>
