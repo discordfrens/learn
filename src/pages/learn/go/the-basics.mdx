@@ -1,0 +1,83 @@
+---
+name: "The Basics"
+category: "go"
+wip: true
+layout: "../../../layouts/MDXLayout.astro"
+---
+
+[Golang](https://go.dev) also known as go widely used language for scaleable systems and CLI tools. Some of these examples may be [charm](https://charm.sh), [pocketbase](https://pocketbase.io), [oh my posh](https://ohmyposh.dev).
+And go is used by companies from around the globe. (meta, microsoft, uber, twitter, switch, google, paypal and much more).
+Go downloads can be found [here](https://go.dev/dl/).
+
+- [The offical go docs](https://go.dev/doc/)
+- [Go in 100 seconds - fireship](https://www.youtube.com/watch?v=446E-r0rXHI)
+- [Go full tutorial - freecodecamp.org](https://www.youtube.com/watch?v=YS4e4q9oBaU)
+
+## Basics - Hello world
+
+Intalizing a go project is as simple as a single command. `go mod init <name>/main` for this example we will be using `hello/main`.
+Create a file called `main.go` within your root directory.
+
+```go
+// Supply a package name, main for the main.go file
+package main;
+
+// Import the "standard libary" aka FMT, which supplies formatted I/O 
+// with functions simular to C's printf and scanf
+import (
+  "fmt"
+)
+
+// Initalize your main function, this will be ran when the go file is ran.
+func main() {
+  // Print out "Hello world"
+  fmt.Println("Hello world")
+}
+```
+
+too run your go project either run `go run main.go` or if you wish to you can build it then run the executable. `go build .`
+
+## External Imports
+
+if you wish to use a go package you will import then using their name or supplied github repo.
+
+```go
+// ...
+
+import (
+  "fmt"
+  "log" // https://pkg.go.dev/log
+  "io" // https://pkg.go.dev/io
+)
+
+// ...
+```
+
+How ever if you wish to install internal files then please continue reading. For this example we will be creating a functions file.
+Please create a `utils/funcs.go` directory + file within your root directory; here is some example code for your `funcs.go` file.
+
+```go
+package funcs
+
+import (
+  "fmt"
+)
+// To export a function it must start with a capital letter
+func Print(message string) {
+  fmt.Println(messsage)
+}
+```
+
+Now to call this function inside of your `main.go` file you will use the following import statment
+```go
+package main
+
+import (
+  funcs "hello/main/utils"
+)
+
+// Usage
+func main() {
+ funcs.Print("Hello world") // Outputs "Hello world"
+}
+```

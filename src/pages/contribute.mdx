@@ -11,7 +11,10 @@ The directory `learn` should follow this simple format.
 <div class="flex row gap-2 w-full">
   ![File
   structure](https://cdn.discordapp.com/attachments/1039957808247996448/1045754382391726110/image.png)
-  <div class="flex flex-col">`learn/[category]/index.astro` `learn/[category]/[topic].mdx`</div>
+  <div class="flex flex-col">
+    <p>`learn/[category]/index.astro`</p>
+    <p>`learn/[category]/[topic].mdx`</p>
+  </div>
 </div>
 
 Your `index.astro` file should contain the following content and nothing else.
@@ -28,7 +31,7 @@ const category = "CATEGORY"
 </BaseLayout>
 ```
 
-Your markdown (mdx) files should contain the following boilerplate content.
+Your `[topic].mdx` files should contain the following boilerplate content.
 
 ```mdx
 ---
