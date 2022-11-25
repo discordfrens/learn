@@ -2,7 +2,7 @@
 import Navbar from "../components/Navbar.astro";
 import Sidebar from "../components/Sidebar.astro";
 import "../styles.css";
-const { name, category } = Astro.props;
+const { name, category, description } = Astro.props;
 ---
 
 <html lang="en">
@@ -11,6 +11,10 @@ const { name, category } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta property="og:title" content={name} />
+    <meta property="og:site_name" content="learn.discordfrens.com" />
+    {description ? <meta property="og:description" content={description.slice(0, 50)} /> : ""}
+    <meta name="theme-color" content="#3772ff" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/lucaburgio/iconoir@main/css/iconoir.css"

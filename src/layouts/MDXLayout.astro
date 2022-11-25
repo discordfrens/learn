@@ -3,7 +3,7 @@ import BaseLayout from "./BaseLayout.astro";
 const { name, description, category } = Astro.props.frontmatter
 ---
 
-<BaseLayout name={name} category={category.toLowerCase()}>
+<BaseLayout name={name} description={description} category={category.toLowerCase()}>
   <h1 class="text-3xl font-bold mb-2 title">{name}</h1>
   <p>{description}</p>
   <slot/>
