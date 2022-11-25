@@ -21,7 +21,7 @@ const { name, category } = Astro.props;
     ></script>
     <title>{name ? `📑 - ${name}` : "📕"}</title>
   </head>
-  <body class="bg-neutral-900 overflow-x-hidden text-white">
+  <body class="bg-neutral-900 px-6 overflow-x-hidden text-white">
     <Navbar />
     <div class="mx-auto flex max-w-[90rem]">
       <Sidebar active={category} />

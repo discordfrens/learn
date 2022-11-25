@@ -13,28 +13,32 @@ const categories = RemoveDupelicates(
 <div
   class="min-w-[300px] max-w-[300px] w-[300px] h-screen overflow-y-hidden pt-[1.89rem] pr-3 flex flex-col"
 >
-<a
-href={`/`}
-class={`min-w-full text-white hover:text-white w-full mb-1 transition ease-in cursor-pointer border-opacity-50 bg-opacity-50 duration-100 border border-neutral-700 bg-neutral-800 px-2 py-1 rounded hover:border-opacity-70 hover:bg-opacity-50 hover:border-neutral-500 hover:bg-neutral-700 ${
-  active === "home"
-    ? "bg-neutral-700 border-neutral-500"
-    : ""
-}`}
->
-<p class="opacity-100">Home</p>
-</a>
+<div class="flex flex-col w-full border-b border-gray-600 pb-4">
+  <h2 class="font-bold text-xl text-white">Important</h2>
   <a
-    href={`/contribute`}
-    class={`min-w-full text-white hover:text-white w-full mb-1 transition ease-in cursor-pointer border-opacity-50 bg-opacity-50 duration-100 border border-neutral-700 bg-neutral-800 px-2 py-1 rounded hover:border-opacity-70 hover:bg-opacity-50 hover:border-neutral-500 hover:bg-neutral-700 ${
-      active === "misc"
-        ? "bg-neutral-700 border-neutral-500"
-        : ""
-    }`}
+  href={`/`}
+  class={`min-w-full text-white hover:text-white w-full mb-1 transition ease-in cursor-pointer border-opacity-50 bg-opacity-50 duration-100 border border-neutral-700 bg-neutral-800 px-2 py-1 rounded hover:border-opacity-70 hover:bg-opacity-50 hover:border-neutral-500 hover:bg-neutral-700 ${
+    active === "home"
+      ? "bg-neutral-700 border-neutral-500"
+      : ""
+  }`}
   >
-    <p class="opacity-100">Contribute</p>
+  <p class="opacity-100">Home</p>
   </a>
-  {
-    categories.map((category) => {
+    <a
+      href={`/contribute`}
+      class={`min-w-full text-white hover:text-white w-full mb-1 transition ease-in cursor-pointer border-opacity-50 bg-opacity-50 duration-100 border border-neutral-700 bg-neutral-800 px-2 py-1 rounded hover:border-opacity-70 hover:bg-opacity-50 hover:border-neutral-500 hover:bg-neutral-700 ${
+        active === "misc"
+          ? "bg-neutral-700 border-neutral-500"
+          : ""
+      }`}
+    >
+      <p class="opacity-100">Contribute</p>
+    </a></div>
+    <div class="pt-4">
+      <h2 class="font-bold text-xl text-white">Topics</h2>
+    {
+      categories.map((category) => {
       return (
         <a
           href={`/learn/${category.toLowerCase()}`}
@@ -48,5 +52,5 @@ class={`min-w-full text-white hover:text-white w-full mb-1 transition ease-in cu
         </a>
       );
     })
-  }
+  }</div>
 </div>

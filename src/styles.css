@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 pre.astro-code {
-  padding: .5rem .5rem !important;
+  padding: 0.5rem 0.5rem !important;
   border-radius: 4px !important;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 pre.astro-code code {
@@ -17,10 +16,11 @@ pre.astro-code code {
   border: none;
 }
 
-pre.astro-code, code {
+pre.astro-code,
+code {
   background-color: rgb(38 38 38 / 1) !important;
   @apply border-opacity-50 border border-neutral-600;
-  font-family: 'JetBrains Mono' !important;
+  font-family: "JetBrains Mono" !important;
 }
 
 /* https://github.com/shikijs/shiki/issues/3 */
@@ -30,6 +30,14 @@ code {
   counter-increment: step 0;
 }
 
+p {
+  color: rgb(220, 220, 220);
+}
+
+a {
+  font-weight: 800;
+}
+
 code .line::before {
   content: counter(step);
   counter-increment: step;
@@ -37,9 +45,8 @@ code .line::before {
   margin-right: 1.25rem;
   display: inline-block;
   text-align: right;
-  color: rgba(255,255,255,.2)
+  color: rgba(255, 255, 255, 0.2);
 }
-
 
 a {
   @apply text-blue-500 transition ease-in duration-[50ms];
@@ -53,9 +60,13 @@ a:hover {
   display: none;
 }
 
-
-h1,h2,h3,h4,h5,h6 {
-  @apply mb-2
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply mb-2;
 }
 
 img {
@@ -63,14 +74,12 @@ img {
 }
 
 .main p:not(.no-margin) {
-  @apply mb-2
+  @apply mb-2;
 }
 
 .main p code {
   @apply p-1 rounded;
 }
-
-
 
 /* Navbar */
 @media screen and (max-width: 516px) {
@@ -83,8 +92,6 @@ img {
   } */
 }
 
-
-
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
@@ -92,10 +99,10 @@ img {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  @apply bg-neutral-800
+  @apply bg-neutral-800;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-neutral-700
+  @apply bg-neutral-700;
 }

@@ -4,21 +4,18 @@ category: "misc"
 layout: "../layouts/MDXLayout.astro"
 ---
 
-Learn is mangaged and maintained by [frens](https://github.com/discordfrens) and its community. Having learn open sourced allows **you** to be able to contribute to this free resource book. Examples on how learn is layed out can be found below or you can see them in the [github repo.](https://github.com/discordfrens/resources)
+Learn is mangaged and maintained by [discordfrens](https://github.com/discordfrens) and its community. Having learn open sourced allows **you** to be able to contribute to this free resource book. Examples on how learn is layed out can be found below or you can see them in the [GitHub repo.](https://github.com/discordfrens/resources)
 
-Learn's file structure follows a simple format.
+The directory `learn` should follow this simple format.
 
 <div class="flex row gap-2 w-full">
-![File structure](https://cdn.discordapp.com/attachments/1039957808247996448/1045754382391726110/image.png)
-<div class="flex flex-col">
-  `learn/[category]/index.astro`
-  <div>
-    `learn/[category]/[item].mdx`
-  </div>
-</div>
+  ![File
+  structure](https://cdn.discordapp.com/attachments/1039957808247996448/1045754382391726110/image.png)
+  <div class="flex flex-col">`learn/[category]/index.astro` `learn/[category]/[topic].mdx`</div>
 </div>
 
-Your following index.astro should contain this content and nothing else.
+Your `index.astro` file should contain the following content and nothing else.
+
 ```astro
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
@@ -31,7 +28,8 @@ const category = "CATEGORY"
 </BaseLayout>
 ```
 
-Any markdown(mdx) files should contain the following boiler plate.
+Your markdown (mdx) files should contain the following boilerplate content.
+
 ```mdx
 ---
 name: "Name"
