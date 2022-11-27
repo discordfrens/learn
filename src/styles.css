@@ -61,27 +61,27 @@ a:hover {
 }
 
 h1 {
-  @apply text-3xl font-bold
+  @apply text-3xl font-bold;
 }
 
 h2 {
-  @apply text-2xl font-bold
+  @apply text-2xl font-bold;
 }
 
 h3 {
-  @apply text-xl font-bold
+  @apply text-xl font-bold;
 }
 
 h4 {
-  @apply text-lg font-bold
+  @apply text-lg font-bold;
 }
 
 h5 {
-  @apply text-base font-bold
+  @apply text-base font-bold;
 }
 
 h6 {
-  @apply text-sm font-bold
+  @apply text-sm font-bold;
 }
 
 h1,
@@ -111,11 +111,11 @@ img {
 .main h4,
 .main h5,
 .main h6 {
-  @apply mt-6
+  @apply mt-6;
 }
 
 li {
-  @apply list-inside list-disc
+  @apply list-inside list-disc;
 }
 /* Navbar */
 @media screen and (max-width: 516px) {
