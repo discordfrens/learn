@@ -18,8 +18,8 @@ pre.astro-code code {
 
 pre.astro-code,
 code {
-  background-color: rgb(38 38 38 / 1) !important;
-  @apply border-opacity-50 border border-neutral-600;
+  background-color: #1a191e !important;
+  @apply border border-border-mid;
   font-family: "JetBrains Mono" !important;
 }
 
@@ -135,10 +135,10 @@ li {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  @apply bg-neutral-800;
+  @apply bg-foreground;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  @apply bg-neutral-700;
+  @apply bg-border-mid;
 }
