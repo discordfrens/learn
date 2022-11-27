@@ -8,5 +8,5 @@ const split = category.toLowerCase().split(" ").join("-")
   <h1 class="text-3xl font-bold mb-2 title">{name}</h1>
   <p>{description}</p>
   <slot/>
-  <a href={`https://github.com/discordfrens/learn/tree/master/src/pages${category.toLowerCase() !== "misc" ? `/learn/${split}` : ""}/${name.toLowerCase().split(" ").join("-")}.mdx`}>Edit on github!</a>
+  <a class="my-3" href={`https://github.com/discordfrens/learn/tree/master/src/pages${category.toLowerCase() !== "misc" ? `/learn/${split}` : ""}/${name.toLowerCase().split(" ").join("-")}.mdx`}>Edit this page on GitHub <i class="fa fa-external-link ml-1"></i></a>
 </BaseLayout>

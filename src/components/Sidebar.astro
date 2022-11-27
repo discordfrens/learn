@@ -23,7 +23,7 @@ const categories = RemoveDupelicates(
       : ""
   }`}
   >
-  <p class="opacity-100">Home</p>
+  <p id="syne" class="opacity-100 font-semibold">Home</p>
   </a>
     <a
       href={`/contribute`}
@@ -33,7 +33,7 @@ const categories = RemoveDupelicates(
           : ""
       }`}
     >
-      <p class="opacity-100">Contribute</p>
+      <p id="syne" class="opacity-100 font-semibold">Contribute</p>
     </a></div>
     <div class="pt-4 flex flex-col">
       <h2 class="font-bold text-xl text-white">Topics</h2>
@@ -48,7 +48,7 @@ const categories = RemoveDupelicates(
               : "bg-foreground border-border-mid"
           }`}
         >
-          <p class="opacity-100">{FormatString(category)}</p>
+          <p id="syne" class="opacity-100 font-semibold">{FormatString(category)}</p>
         </a>
       );
     })
