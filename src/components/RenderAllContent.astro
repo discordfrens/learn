@@ -12,7 +12,7 @@ const stuffs = posts.filter(f => f.frontmatter.category.toLowerCase() === catego
   {stuffs.map((stuff) => {
     return  <a
           href={`/learn/${stuff.frontmatter.category.toLowerCase().split(" ").join("-")}/${stuff.frontmatter.name.toLowerCase().split(" ").join("-")}`}
-          class="text-white hover:text-white w-full mb-1 transition ease-in cursor-pointer border-opacity-50 bg-opacity-50 duration-100 border border-neutral-700 bg-neutral-800 px-2 py-1 rounded hover:border-opacity-70 hover:bg-opacity-50 hover:border-neutral-500 hover:bg-neutral-700"
+          class="min-w-full text-white hover:text-white w-full mb-1 transition ease-in cursor-pointer border-opacity-50 bg-opacity-50 duration-100 border bg-foreground border-border-mid px-2 py-1 rounded hover:border-border-light hover:bg-border"
         >
           <p class="opacity-100 no-margin">{stuff.frontmatter.name}</p>
         </a>
