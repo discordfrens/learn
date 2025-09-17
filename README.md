@@ -1,1 +1,1 @@
-# Resources
+> No longer active.
